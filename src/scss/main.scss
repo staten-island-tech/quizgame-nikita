@@ -17,6 +17,7 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   justify-content: center;
@@ -32,8 +33,19 @@ body.wrong {
   --hue: var(--hue-wrong);
 }
 
+.title {
+  margin: 20px 0;
+  background-color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 3rem;
+  border-radius: 5px;
+  padding: 3px;
+  border-color: hsl(var(--hue), 100%, 50%);
+  border-width: 2px;
+}
+
 .container {
-  width: 400px;
+  width: 600px;
   max-width: 80%;
   background-color: white;
   border-radius: 5px;
@@ -59,7 +71,8 @@ body.wrong {
 }
 
 .btn:hover {
-  border-color: black;
+  color: white;
+  background-color: purple;
 }
 
 .btn.correct {

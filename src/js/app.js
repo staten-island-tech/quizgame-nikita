@@ -4,6 +4,7 @@ const questionContainerElement = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const score = document.getElementById("score-container");
+const title = document.getElementById("mainTitle");
 
 let randomQuestions, currentQuestionIndex;
 let totalScore = 0;
@@ -21,6 +22,7 @@ function startGame() {
   questionContainerElement.classList.remove("hide");
   setNextQuestion();
   score.classList.add("hide");
+  title.classList.add("hide");
 }
 
 function setNextQuestion() {
@@ -84,53 +86,53 @@ function clearStatusClass(element) {
 
 function scoreCounter() {
   let scorePerCent = totalScore;
-  score.innerHTML = "score: " + scorePerCent + "/5";
+  score.innerHTML = "You got " + scorePerCent + "/5!";
 }
 
 const questions = [
   {
-    question: "A question",
+    question: "What model holds the title of fastest car in the world?",
     answers: [
-      { text: "rgrbb", correct: false },
-      { text: "rgrbb", correct: true },
-      { text: "rgrbb", correct: false },
-      { text: "rgrbb", correct: false },
+      { text: "Bugatti Chiron", correct: false },
+      { text: "SSC Tuatara", correct: true },
+      { text: "Lamborghini Aventador", correct: false },
+      { text: "Koenigsegg Agera", correct: false },
     ],
   },
   {
-    question: "B Question",
+    question: "What is the most popular (and best-selling) car in the world?",
     answers: [
-      { text: "rgrbb", correct: false },
-      { text: "rgrbb", correct: true },
-      { text: "rgrbb", correct: false },
-      { text: "rgrbb", correct: false },
+      { text: "Toyota Corolla", correct: true },
+      { text: "Ford Model T", correct: false },
+      { text: "Honda Accord", correct: false },
+      { text: "Volkswagen Beetle", correct: false },
     ],
   },
   {
-    question: "C Question",
+    question: "How many cars are produced worldwide every year?",
     answers: [
-      { text: "rgrbb", correct: false },
-      { text: "rgrbb", correct: true },
-      { text: "rgrbb", correct: false },
-      { text: "rgrbb", correct: false },
+      { text: "1 billion", correct: false },
+      { text: "165,000", correct: false },
+      { text: "100 million", correct: false },
+      { text: "70 million", correct: true },
     ],
   },
   {
-    question: "D Question",
+    question: "How many unique parts does an average car contain?",
     answers: [
-      { text: "rgrbb", correct: false },
-      { text: "rgrbb", correct: true },
-      { text: "rgrbb", correct: false },
-      { text: "rgrbb", correct: false },
+      { text: "200", correct: false },
+      { text: "30,000", correct: true },
+      { text: "1,000", correct: false },
+      { text: "15,000", correct: false },
     ],
   },
   {
-    question: "E question",
+    question: "What does BMW stand for?",
     answers: [
-      { text: "rgrbb", correct: false },
-      { text: "rgrbb", correct: true },
-      { text: "rgrbb", correct: false },
-      { text: "rgrbb", correct: false },
+      { text: "It doesn't stand for anything", correct: false },
+      { text: "Bayerische Motoren Werke", correct: true },
+      { text: "BMW", correct: false },
+      { text: "Blinkers Mean What", correct: false },
     ],
   },
 ];
